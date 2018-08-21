@@ -1,29 +1,19 @@
 version: 2
-jobs:
-  build:
-    docker:
-      - image: circleci/node:8-browsers
-    working_directory: ~/
-    steps:
-      - checkout
-      - run:
-          name: install
-          command: npm install
-      - run:
-          name: start
-          command: npm start
-  test:
-    docker:
-      - image: circleci/node:8-browsers
-    working_directory: ~/
-    steps:
-      - checkout
-      - run:
-          name:install
-          command: npm install
-      - run:
-          name: start
-          command: npm start
-      - run:
-          name: curl
-          command: curl -i localhost:8080
+  jobs:
+    build:
+      docker:
+        - image: circleci/node:8-browsers
+      working_directory: ~/
+      steps:
+        - checkout
+        - run: npm install
+        - run: npm start
+    test:
+      docker:
+        - image: circleci/node:8-browsers
+      working_directory: ~/
+      steps:
+        - checkout
+        - run: npm install
+        - run: npm start
+        - run: curl -i localhost:8080
