@@ -1,6 +1,6 @@
 {
-  "name": "circle_sample",
-  "version": "0.1",
+  "name": "circleci_sample",
+  "version": "0.0.0",
   "description": "sample nodejs app",
   "author": "hanping@ankr.network",
   "main": "server.js",

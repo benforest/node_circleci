@@ -7,4 +7,4 @@ app.get('/', (req, res) => {
   res.send('Hello World\n');
 });
 app.listen(PORT, HOST);
-console.log('Running on http://${HOST}:${PORT}'};
+console.log(`Running on http://${HOST}:${PORT}`);
