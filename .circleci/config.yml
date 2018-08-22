@@ -7,7 +7,6 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - run: npm install
       - run: 
           name: install aws
           command: |
@@ -23,9 +22,3 @@ jobs:
             docker build -t ankr_ecr .
             docker tag ankr_ecr:latest 815280425737.dkr.ecr.us-west-1.amazonaws.com/ankr_ecr:latest
             docker push 815280425737.dkr.ecr.us-west-1.amazonaws.com/ankr_ecr:latest
-
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - build
